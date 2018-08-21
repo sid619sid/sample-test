@@ -26,8 +26,8 @@ def webhook():
 #processing the request from dialogflow
 def processRequest(req):
     if req.get("result").get("action")=="weather":
-        return {}    
-    result = req.get("result")
+        #return {}    
+        result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
     observation = owm.weather_at_place(city)
